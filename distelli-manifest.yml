@@ -37,8 +37,6 @@ buben1590/tomcat-war-docker:
 
   Exec:
     ### Docker Exec Commands ###
-    - cid=$(uuidgen)
-    - trap 'sudo docker stop $cid' SIGTERM
     - sudo -E docker run --rm=true $DISTELLI_DOCKER_PORTS  "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM" 
     ### End Docker Exec Commands ###
 
